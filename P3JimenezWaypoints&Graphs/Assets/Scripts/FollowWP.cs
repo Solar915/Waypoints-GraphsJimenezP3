@@ -23,7 +23,7 @@ public class FollowWP : MonoBehaviour
 
     void ProgressTracker()
     {
-        if (Vector3.Distance(this.transform.position, waypoints[currentWP].transform.position) < 3.0f)
+        if (Vector3.Distance(tracker.transform.position, waypoints[currentWP].transform.position) < 3.0f)
         {
 
             currentWP++;
@@ -44,9 +44,9 @@ public class FollowWP : MonoBehaviour
 
             //this.transform.LookAt(waypoints[currentWP].transform);
 
-          //Quaternion lookAtWP = Quaternion.LookRotation(tracker.transform.position - this.transform.position);
-          //this.transform.rotation = Quaternion.Slerp(transform.rotation, lookAtWP, Time.deltaTime * rotSpeed);
-          //this.transform.Translate(0.0f, 0.0f, speed * Time.deltaTime);
+            //Quaternion lookAtWP = Quaternion.LookRotation(tracker.transform.position - this.transform.position);
+            //this.transform.rotation = Quaternion.Slerp(transform.rotation, lookAtWP, Time.deltaTime * rotSpeed);
+            //this.transform.Translate(0.0f, 0.0f, speed * Time.deltaTime);
         }
     }
 }
